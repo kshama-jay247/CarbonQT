@@ -55,3 +55,30 @@ void SystemMonitor::getMemoryUsage(double& usedMB, double& swapUsedMB) {
     usedMB = (memTotal - memFree) / 1024.0;
     swapUsedMB = (swapTotal - swapFree) / 1024.0;
 }
+
+double SystemMonitor::getRamUsage()
+{
+    std::ifstream file("/proc/meminfo");
+    std::string key;
+    long value;
+    std::string unit;
+    long total = 0;
+    long available = 0;
+
+    while (file >> key >> value >> unit)
+    {
+        if (key == "MemTotal:")
+            total = value;
+
+        if (key == "MemAvailable:")
+        {
+            available = value;
+            break;
+        }
+    }
+
+    if (total == 0)
+        return 0;
+
+    return ((total - available) / (double)total) * 100.0;
+}

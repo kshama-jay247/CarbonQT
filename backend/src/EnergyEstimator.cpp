@@ -30,7 +30,7 @@ EnergyMetrics EnergyEstimator::estimate(
 
     double energy_joules = total_watts * interval_seconds;
     double kwh = energy_joules / 3'600'000.0;
-    double co2 = kwh * carbon_intensity;
+    double co2 = kwh * carbon_intensity * 1'000'000.0;
 
     return {cpu_watts, ram_watts, total_watts, energy_joules, co2};
 }

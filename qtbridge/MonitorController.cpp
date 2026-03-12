@@ -30,3 +30,14 @@ double MonitorController::memoryUsed() const {
     SystemMonitor::getMemoryUsage(used, swap);
     return used;
 }
+
+double MonitorController::ramUsage() const
+{
+    return m_ramUsage;
+}
+
+void MonitorController::updateStats()
+{
+    m_ramUsage = SystemMonitor::getRamUsage();
+    emit dataChanged();
+}

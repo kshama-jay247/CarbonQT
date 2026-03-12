@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="/qt/qml/MyApp/">
+    <file alias="Main.qml">/home/kshama/CarbonQT/Main.qml</file>
+    <file alias="pages/Dashboard.qml">/home/kshama/CarbonQT/pages/Dashboard.qml</file>
+    <file alias="pages/Processes.qml">/home/kshama/CarbonQT/pages/Processes.qml</file>
+    <file alias="pages/EnergyEstimator.qml">/home/kshama/CarbonQT/pages/EnergyEstimator.qml</file>
+    <file alias="components/SidebarButton.qml">/home/kshama/CarbonQT/components/SidebarButton.qml</file>
+    <file alias="components/StatCard.qml">/home/kshama/CarbonQT/components/StatCard.qml</file>
+    <file alias="components/TableHeader.qml">/home/kshama/CarbonQT/components/TableHeader.qml</file>
+    <file alias="components/RingChart.qml">/home/kshama/CarbonQT/components/RingChart.qml</file>
+    <file alias="components/Theme.qml">/home/kshama/CarbonQT/components/Theme.qml</file>
+    <file alias="components/DoughnutStat.qml">/home/kshama/CarbonQT/components/DoughnutStat.qml</file>
+    <file alias="components/PidThreadsChart.qml">/home/kshama/CarbonQT/components/PidThreadsChart.qml</file>
+    <file alias="assets/logo.png">/home/kshama/CarbonQT/assets/logo.png</file>
+    <file alias="assets/icons/refresh.svg">/home/kshama/CarbonQT/assets/icons/refresh.svg</file>
+  </qresource>
+</RCC>
+
