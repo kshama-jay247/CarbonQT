@@ -64,21 +64,34 @@ export const siteContent = {
       external: true
     },
     downloadMenu: {
-      label: "Resources",
+      label: "Download",
       groups: [
         {
-          title: "Resource Group One",
+          title: "GUI App (Qt)",
           items: [
-            { label: "Resource Link One", href: "#resource-one", platform: "apple" },
-            { label: "Resource Link Two", href: "#resource-two", platform: "windows" },
-            { label: "Resource Link Three", href: "#resource-three", platform: "linux" },
-          ],
+            {
+              label: "Linux (.AppImage)",
+              href: "https://github.com/kshama-jay247/CarbonQT_GUI/releases",
+              platform: "linux"
+            }
+          ]
         },
         {
-          title: "Resource Group Two",
-          items: [{ label: "Resource Link Four", href: "#resource-four", platform: "apple" }],
-        },
-      ],
+          title: "CLI Tool (Go)",
+          items: [
+            {
+              label: "Download CLI",
+              href: "https://github.com/YOUR_USERNAME/carbonqt-cli/releases",
+              platform: "linux"
+            },
+            {
+              label: "View CLI Repo",
+              href: "https://github.com/kshama-jay247/CarbonQT_CLI",
+              platform: "linux"
+            }
+          ]
+        }
+      ]
     },
   },
   hero: {
@@ -92,9 +105,9 @@ export const siteContent = {
     description:
       "Monitor CPU, RAM, processes and energy usage in real-time with an intuitive GUI and powerful CLI.",
     primaryCta: {
-      label: "Download Now",
-      href: "#download",
-      external: false,
+      label: "Download GUI",
+      href: "https://github.com/YOUR_USERNAME/carbonqt-cli/releases",
+      external: true
     },
     secondaryCta: {
       label: "View GitHub",
@@ -175,7 +188,7 @@ export const siteContent = {
         description:
           "Use CarbonQt via desktop UI or command-line interface.",
         href: "#",
-        cta: "Try",
+        cta: "View CLI",
         backgroundClassName:
           "absolute inset-0 bg-linear-to-br from-orange-50 to-yellow-50",
       },

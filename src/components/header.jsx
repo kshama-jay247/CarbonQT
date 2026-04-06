@@ -113,7 +113,7 @@ export function Header() {
               </div>
             )}
           </div>
-          <Button asChild>
+          {/* <Button asChild>
             <a
               href={siteContent.navigation.primaryCta.href}
               target={siteContent.navigation.primaryCta.external ? "_blank" : undefined}
@@ -121,7 +121,7 @@ export function Header() {
             >
               {siteContent.navigation.primaryCta.label}
             </a>
-          </Button>
+          </Button> */}
         </div>
         <Button
           size="icon"
@@ -174,7 +174,7 @@ export function Header() {
             <Download className="h-4 w-4 mr-2" />
             {siteContent.navigation.downloadMenu.label}
           </Button>
-          <Button className="w-full" asChild>
+          {/* <Button className="w-full" asChild>
             <a
               href={siteContent.navigation.primaryCta.href}
               target={siteContent.navigation.primaryCta.external ? "_blank" : undefined}
@@ -182,7 +182,7 @@ export function Header() {
             >
               {siteContent.navigation.primaryCta.label}
             </a>
-          </Button>
+          </Button> */}
         </div>
       </MobileMenu>
     </header>

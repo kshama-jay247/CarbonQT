@@ -1,4 +1,4 @@
-export function Logo({ size = 32 }) {
+export function Logo({ size = 38 }) {
   return (
     <div className="flex items-center gap-2">
       <img
