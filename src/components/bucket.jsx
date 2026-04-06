@@ -32,7 +32,7 @@ const Bucket = () => {
         const [first, ...rest] = prev;
         return [...rest, first];
       });
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
@@ -601,17 +601,17 @@ const Bucket = () => {
                       },
                     }}
                     transition={{
-                      duration: 0.5,
+                      duration: 0.4,
                       ease: [0.455, 0.03, 0.515, 0.955],
                     }}
-                    className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 z-10 rounded-full p-2 w-[240px] shadow-sm absolute pointer-events-auto flex items-center gap-2 origin-bottom">
+                    className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-full p-3 w-[260px] shadow-lg flex items-center gap-3">
                     {/* <div className="size-8 rounded-full bg-emerald-500 shrink-0" />
                     <div className="flex flex-col gap-1.5 w-full">
                       <div className="h-2 w-3/4 bg-muted rounded-full" />
                       <div className="h-2 w-1/2 bg-muted rounded-full" />
                     </div> */}
                     <div
-                      className="flex size-10 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                      className="flex size-10 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700">
                       <HugeiconsIcon icon={chip.icon} className="size-5" />
                     </div>
                     <div className="flex flex-col gap-0.5">

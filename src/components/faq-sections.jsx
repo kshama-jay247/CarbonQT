@@ -18,10 +18,13 @@ const App = () => {
             `}</style>
             <div
                 className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-center gap-8 px-6">
-                <img
-                    className="max-w-sm w-full rounded-xl h-auto"
-                    src={faqSection.image.src}
-                    alt={faqSection.image.alt} />
+                {faqSection.image && (
+                    <img
+                        className="max-w-sm w-full rounded-xl h-auto"
+                        src={faqSection.image.src}
+                        alt={faqSection.image.alt}
+                    />
+                )}
                 <div className="flex-1">
                     <p className="text-indigo-600 dark:text-indigo-400 text-sm font-medium">{faqSection.eyebrow}</p>
                     <h1 className="text-3xl font-semibold">{faqSection.title}</h1>

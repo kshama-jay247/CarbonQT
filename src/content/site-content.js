@@ -1,54 +1,55 @@
 export const siteContent = {
   brand: {
-    name: "Your Product",
-    tagline: "Your Product Tagline",
+    name: "CarbonQT",
+    tagline: "Monitor. Analyze. Reduce.",
     shortDescription:
-      "Write a short description of your product, service, or company here.",
-    siteUrl: "https://example.com",
-    repositoryUrl: "https://github.com/your-org/your-repo",
-    releasesUrl: "https://example.com/download",
-    documentationUrl: "https://example.com/docs",
+      "A lightweight system monitoring tool with real-time insights into CPU, RAM, processes, and energy usage.",
+    siteUrl: "http://localhost:3000",
+    repositoryUrl: "https://github.com/your-username/carbonqt",
+    releasesUrl: "#download",
+    documentationUrl: "#docs",
     author: {
       name: "Your Name",
-      githubUrl: "https://github.com/your-handle",
-      linkedinUrl: "https://linkedin.com/in/your-handle",
-      twitterUrl: "https://x.com/your-handle",
-      twitterHandle: "@yourhandle",
+      githubUrl: "https://github.com/your-username",
+      linkedinUrl: "#",
+      twitterUrl: "#",
+      twitterHandle: "",
     },
   },
   metadata: {
     title: {
-      default: "Your Product - Short SEO Headline",
-      template: "%s | Your Product",
+      default: "CarbonQt - System Monitoring & Energy Insights",
+      template: "%s | CarbonQt",
     },
     description:
-      "Write an SEO-friendly description for your landing page here.",
+      "CarbonQt is a system monitoring tool that tracks CPU, RAM, processes, and energy usage with a GUI and CLI.",
     keywords: [
-      "your product",
-      "your category",
-      "your industry",
-      "feature keyword one",
-      "feature keyword two",
-      "landing page template",
+      "system monitor",
+      "cpu usage",
+      "ram usage",
+      "linux monitoring",
+      "energy tracking",
+      "carbon footprint",
+      "process monitoring",
     ],
-    openGraphTitle: "Your Product - Social Sharing Title",
+    openGraphTitle: "CarbonQt",
     openGraphDescription:
-      "Write a short social preview description for your product here.",
-    twitterTitle: "Your Product - Social Sharing Title",
+      "Real-time system monitoring with energy insights.",
+    twitterTitle: "CarbonQt",
     twitterDescription:
-      "Write a short Twitter/X description here.",
+      "Monitor CPU, RAM, processes and energy usage in real-time.",
     jsonLd: {
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web, iOS, Android",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "Linux",
       description:
-        "Describe your product in one sentence for structured data.",
-      downloadUrl: "https://example.com/download",
-      softwareVersion: "0.0.1",
+        "CarbonQt is a lightweight system monitoring tool with energy tracking.",
+      downloadUrl: "#download",
+      softwareVersion: "1.0.0",
       featureList: [
-        "Primary feature placeholder",
-        "Secondary feature placeholder",
-        "Third feature placeholder",
-        "Fourth feature placeholder",
+        "Real-time CPU & RAM monitoring",
+        "Process and thread visualization",
+        "Energy & CO2 estimation",
+        "CLI + GUI support",
       ],
     },
   },
@@ -83,100 +84,101 @@ export const siteContent = {
   },
   hero: {
     badge: {
-      label: "Add a short badge label here",
-      href: "https://example.com",
+      label: "Open Source System Monitor",
+      href: "https://github.com/your-username/carbonqt",
       external: true,
     },
-    titlePrefix: "Your",
-    titleSuffix: "Main Headline",
+    titlePrefix: "Carbon",
+    titleSuffix: "Qt",
     description:
-      "Use this section to explain your main value proposition in one or two lines.",
+      "Monitor CPU, RAM, processes and energy usage in real-time with an intuitive GUI and powerful CLI.",
     primaryCta: {
-      label: "Primary CTA",
-      href: "https://example.com/primary-action",
-      external: true,
+      label: "Download Now",
+      href: "#download",
+      external: false,
     },
     secondaryCta: {
-      label: "Secondary CTA",
-      href: "https://example.com/secondary-action",
+      label: "View GitHub",
+      href: "https://github.com/your-username/carbonqt",
       external: true,
     },
   },
   bucketChips: [
     {
       id: 1,
-      title: "Feature One",
-      description: "Short supporting line",
-      icon: "zap",
+      title: "Real-Time Monitoring",
+      description: "CPU, RAM, processes live",
+      icon: "zap"
     },
     {
       id: 2,
-      title: "Feature Two",
-      description: "Short supporting line",
-      icon: "security",
+      title: "Energy Tracking",
+      description: "Estimate power & CO₂ usage",
+      icon: "sparkles"
     },
     {
       id: 3,
-      title: "Feature Three",
-      description: "Short supporting line",
-      icon: "story",
+      title: "Process Insights",
+      description: "Threads, PIDs, performance",
+      icon: "story"
     },
     {
       id: 4,
-      title: "Feature Four",
-      description: "Short supporting line",
-      icon: "sparkles",
-    },
+      title: "CLI Support",
+      description: "Run monitoring from terminal",
+      icon: "security"
+    }
   ],
   featuresSection: {
     id: "features",
     title: "Core Features",
     description:
-      "Introduce the main capabilities or benefits of your product here.",
+      "Everything you need to monitor and understand your system performance.",
+
     items: [
       {
-        name: "Feature Card One",
+        name: "Real-Time Monitoring",
         className: "col-span-3 lg:col-span-2",
-        icon: "trending-up",
+        icon: "activity",
         description:
-          "Add a short explanation for this feature card.",
-        href: "#",
-        cta: "Learn More",
-        backgroundClassName:
-          "absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20",
-      },
-      {
-        name: "Feature Card Two",
-        className: "col-span-3 lg:col-span-1",
-        icon: "zap",
-        description:
-          "Add a short explanation for this feature card.",
+          "Track CPU and RAM usage live with smooth visualizations.",
         href: "#",
         cta: "Explore",
         backgroundClassName:
-          "absolute inset-0 bg-linear-to-br from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20",
+          "absolute inset-0 bg-linear-to-br from-green-50 to-emerald-50",
       },
       {
-        name: "Feature Card Three",
+        name: "Process Analysis",
         className: "col-span-3 lg:col-span-1",
-        icon: "activity",
+        icon: "zap",
         description:
-          "Add a short explanation for this feature card.",
+          "View processes, threads, and system load distribution.",
         href: "#",
-        cta: "View More",
+        cta: "View",
         backgroundClassName:
-          "absolute inset-0 bg-linear-to-br from-green-50 to-teal-50 dark:from-green-950/20 dark:to-teal-950/20",
+          "absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50",
       },
       {
-        name: "Feature Card Four",
-        className: "col-span-3 lg:col-span-2",
-        icon: "shield-check",
+        name: "Energy Estimation",
+        className: "col-span-3 lg:col-span-1",
+        icon: "sparkles",
         description:
-          "Add a short explanation for this feature card.",
+          "Estimate power consumption and CO₂ emissions.",
         href: "#",
-        cta: "Get Started",
+        cta: "Learn",
         backgroundClassName:
-          "absolute inset-0 bg-linear-to-br from-orange-50 to-yellow-50 dark:from-orange-950/20 dark:to-yellow-950/20",
+          "absolute inset-0 bg-linear-to-br from-purple-50 to-pink-50",
+      },
+      {
+        name: "CLI + GUI",
+        className: "col-span-3 lg:col-span-2",
+        icon: "terminal",
+        description:
+          "Use CarbonQt via desktop UI or command-line interface.",
+        href: "#",
+        cta: "Try",
+        backgroundClassName:
+          "absolute inset-0 bg-linear-to-br from-orange-50 to-yellow-50",
       },
     ],
   },
@@ -195,39 +197,31 @@ export const siteContent = {
   },
   faqSection: {
     id: "faq",
-    image: {
-      src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=830&h=844&auto=format&fit=crop",
-      alt: "Placeholder product visual",
-    },
     eyebrow: "FAQ",
     title: "Frequently Asked Questions",
     description:
-      "Use this section to answer the most common questions about your product.",
+      "Everything you need to know about CarbonQt.",
+
     items: [
       {
-        question: "What problem does your product solve?",
+        question: "What is CarbonQt?",
         answer:
-          "Add a clear answer explaining the main value of your product.",
+          "A system monitoring tool that tracks performance and energy usage.",
       },
       {
-        question: "Who is this product for?",
+        question: "Does it support CLI?",
         answer:
-          "Describe your target audience, ideal customers, or use cases here.",
+          "Yes, CarbonQt includes a fully functional CLI for monitoring.",
       },
       {
-        question: "How does pricing work?",
+        question: "How is energy calculated?",
         answer:
-          "Explain your pricing model, free plan, trial, or contact process here.",
+          "Using CPU and RAM usage with configurable power models.",
       },
       {
-        question: "How do users get started?",
+        question: "Is it open source?",
         answer:
-          "Add the first steps a new user should take to start using your product.",
-      },
-      {
-        question: "Where can people learn more?",
-        answer:
-          "Link to your documentation, onboarding guide, support email, or help center.",
+          "Yes, available on GitHub.",
       },
     ],
   },
