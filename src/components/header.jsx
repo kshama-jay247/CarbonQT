@@ -10,6 +10,7 @@ import { Moon, Sun, Download } from "lucide-react";
 import { useTheme } from "next-themes";
 import { FaApple, FaWindows, FaLinux } from "react-icons/fa";
 import { siteContent } from "@/content/site-content";
+import { Logo } from "@/components/ui/logo";
 
 const platformIcons = {
   apple: FaApple,
@@ -47,9 +48,9 @@ export function Header() {
       })}
     >
       <nav className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-6">
-        <a href="/" className="hover:bg-accent rounded-md p-2 font-bold text-xl">
-          {siteContent.brand.name}
-        </a>
+        <a href="/" className="hover:bg-accent rounded-md p-2">
+  <Logo />
+</a>
         <div className="hidden items-center gap-2 md:flex">
           {siteContent.navigation.links.map((link) => (
             <a

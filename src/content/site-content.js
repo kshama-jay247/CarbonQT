@@ -226,7 +226,7 @@ export const siteContent = {
   },
   footer: {
     resourceLinks: [
-      { label: "Documentation", href: "https://example.com/docs", external: true },
+      { label: "Documentation", href: "https://github.com/kshama-jay247/CarbonQT#readme", external: true },
       { label: "Repository", href: "https://github.com/kshama-jay247/CarbonQT", external: true },
       { label: "Features", href: "#features" },
       { label: "FAQ", href: "#faq" },
