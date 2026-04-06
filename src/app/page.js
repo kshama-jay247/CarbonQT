@@ -1,4 +1,3 @@
-import EmptyTestimonial from "@/components/empty-testimonial";
 import FaqSections from "@/components/faq-sections";
 import { Component as FooterTapedDesign } from "@/components/footer-taped-design";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -128,11 +127,6 @@ export default function Home() {
               ))}
             </BentoGrid>
           </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section id={siteContent.testimonialsSection.id}>
-          <EmptyTestimonial />
         </section>
 
         {/* FAQ Section */}

@@ -5,7 +5,7 @@ export const siteContent = {
     shortDescription:
       "A lightweight system monitoring tool with real-time insights into CPU, RAM, processes, and energy usage.",
     siteUrl: "http://localhost:3000",
-    repositoryUrl: "https://github.com/your-username/carbonqt",
+    repositoryUrl: "https://github.com/kshama-jay247/CarbonQT",
     releasesUrl: "#download",
     documentationUrl: "#docs",
     author: {
@@ -56,13 +56,12 @@ export const siteContent = {
   navigation: {
     links: [
       { label: "Features", href: "#features" },
-      { label: "Testimonials", href: "#testimonials" },
       { label: "FAQ", href: "#faq" },
     ],
     primaryCta: {
-      label: "Primary Action",
-      href: "https://example.com/get-started",
-      external: true,
+      label: "Download",
+      href: "https://github.com/kshama-jay247/CarbonQT/releases",
+      external: true
     },
     downloadMenu: {
       label: "Resources",
@@ -85,7 +84,7 @@ export const siteContent = {
   hero: {
     badge: {
       label: "Open Source System Monitor",
-      href: "https://github.com/your-username/carbonqt",
+      href: "https://github.com/kshama-jay247/CarbonQT",
       external: true,
     },
     titlePrefix: "Carbon",
@@ -99,7 +98,7 @@ export const siteContent = {
     },
     secondaryCta: {
       label: "View GitHub",
-      href: "https://github.com/your-username/carbonqt",
+      href: "https://github.com/kshama-jay247/CarbonQT",
       external: true,
     },
   },
@@ -228,7 +227,7 @@ export const siteContent = {
   footer: {
     resourceLinks: [
       { label: "Documentation", href: "https://example.com/docs", external: true },
-      { label: "Repository", href: "https://github.com/your-org/your-repo", external: true },
+      { label: "Repository", href: "https://github.com/kshama-jay247/CarbonQT", external: true },
       { label: "Features", href: "#features" },
       { label: "FAQ", href: "#faq" },
     ],
