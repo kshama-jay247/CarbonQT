@@ -56,6 +56,7 @@ export const siteContent = {
   navigation: {
     links: [
       { label: "Features", href: "#features" },
+      { label: "Get Started", href: "/get-started" },
       { label: "FAQ", href: "#faq" },
     ],
     primaryCta: {
@@ -71,24 +72,33 @@ export const siteContent = {
           items: [
             {
               label: "Linux (.AppImage)",
-              href: "https://github.com/kshama-jay247/CarbonQT_GUI/releases",
+              href: "https://github.com/YOUR_USERNAME/carbonqt-gui/releases",
               platform: "linux"
             }
           ]
         },
         {
-          title: "CLI Tool (Go)",
+          title: "CLI Tool",
           items: [
             {
-              label: "Download CLI",
-              href: "https://github.com/YOUR_USERNAME/carbonqt-cli/releases",
-              platform: "linux"
+              label: "Linux",
+              platform: "linux",
+              amdHref: "https://github.com/kshama-jay247/CarbonQT_CLI/actions/runs/24081990206/artifacts/6305901460",
+              armHref: "https://github.com/kevinsg3031/CarbonQT_CLI/actions/runs/24083884148/artifacts/6306686932"
             },
             {
-              label: "View CLI Repo",
-              href: "https://github.com/kshama-jay247/CarbonQT_CLI",
-              platform: "linux"
+              label: "Windows",
+              platform: "windows",
+              amdHref: "https://github.com/kshama-jay247/CarbonQT_CLI/actions/runs/24081990206/artifacts/6305904356",
+              armHref: "https://github.com/kevinsg3031/CarbonQT_CLI/actions/runs/24083884148/artifacts/6306692194"
+            },
+            {
+              label: "Mac",
+              platform: "apple",
+              amdHref: "https://github.com/kshama-jay247/CarbonQT_CLI/actions/runs/24081990206/artifacts/6305903635",
+              armHref: "https://github.com/kevinsg3031/CarbonQT_CLI/actions/runs/24083884148/artifacts/6306691520"
             }
+
           ]
         }
       ]
@@ -97,7 +107,7 @@ export const siteContent = {
   hero: {
     badge: {
       label: "Open Source System Monitor",
-      href: "https://github.com/kshama-jay247/CarbonQT",
+      href: "https://github.com/kshama-jay247/CarbonQT_CLI",
       external: true,
     },
     titlePrefix: "Carbon",
@@ -193,6 +203,41 @@ export const siteContent = {
           "absolute inset-0 bg-linear-to-br from-orange-50 to-yellow-50",
       },
     ],
+  },
+  getStartedSection: {
+    id: "get-started",
+    title: "Get Started",
+    description: "Step-by-step instructions to install CarbonQt GUI and CLI, and run your first command.",
+    steps: [
+      {
+        number: "1",
+        title: "Install the GUI App",
+        description: "Download the latest Qt-based GUI release for your platform.",
+        details: "Once downloaded, run the installer and launch CarbonQt from your applications menu.",
+        links: [
+          { label: "Linux (.AppImage)", href: "https://github.com/YOUR_USERNAME/carbonqt-gui/releases" },
+          { label: "Windows and Mac releases coming soon", href: null }
+        ]
+      },
+      {
+        number: "2",
+        title: "Install the CLI Tool",
+        description: "Download the CLI binaries for your platform.",
+        details: "Extract the binary and add it to your PATH for easy access.",
+        links: [
+          { label: "Linux (AMD/ARM)", href: "https://github.com/kshama-jay247/CarbonQT_CLI" },
+          { label: "Windows (AMD/ARM)", href: "https://github.com/kshama-jay247/CarbonQT_CLI" },
+          { label: "Mac (AMD/ARM)", href: "https://github.com/kshama-jay247/CarbonQT_CLI" }
+        ]
+      },
+      {
+        number: "3",
+        title: "Run Your First Command",
+        description: "Open a terminal and type:",
+        details: "This will show all available options. Try `carbonqt-cli monitor` to start monitoring CPU and RAM usage.",
+        code: "carbonqt-cli --help"
+      }
+    ]
   },
   testimonialsSection: {
     id: "testimonials",
