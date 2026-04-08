@@ -9,7 +9,9 @@ import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import { DownloadButton } from "@/components/download-button";
 import { siteContent } from "@/content/site-content";
+import { useDownloadMenu } from "@/components/Header";
 import CopyCodeBlock from "@/components/CopyCodeBlock";
+import DownloadLink from "@/components/DownloadLink";
 
 const featureIcons = {
   activity: Activity,
@@ -134,52 +136,56 @@ export default function Home() {
         </section>
 
         {/* Get Started Section */}
-        <section id={siteContent.getStartedSection.id} className="min-h-screen py-24 px-6 bg-green-50 dark:bg-black">
+        <section
+          id={siteContent.getStartedSection.id}
+          className="min-h-screen py-24 px-6 bg-green-50 dark:bg-black"
+        >
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-green-700 dark:text-green-300">
-  {siteContent.getStartedSection.title}
-</h2>
-<p className="text-lg text-green-700 dark:text-green-200 max-w-2xl mx-auto">
-  {siteContent.getStartedSection.description}
-</p>
-
+                {siteContent.getStartedSection.title}
+              </h2>
+              <p className="text-lg text-green-700 dark:text-green-200 max-w-2xl mx-auto">
+                {siteContent.getStartedSection.description}
+              </p>
             </div>
 
             <div className="space-y-12">
               {siteContent.getStartedSection.steps.map((step) => (
                 <div key={step.number}>
                   <h3 className="text-2xl font-semibold text-green-700 dark:text-green-300 mb-4">
-  {step.number}. {step.title}
-</h3>
-<p className="text-green-700 dark:text-green-200 mb-2">{step.description}</p>
+                    {step.number}. {step.title}
+                  </h3>
+                  <p className="text-green-700 dark:text-green-200 mb-2">
+                    {step.description}
+                  </p>
 
                   {step.links && (
                     <ul className="list-disc list-inside text-green-700 dark:text-green-200">
-                      {step.links.map((link, idx) =>
-                        link.href ? (
-                          <li key={idx}>
-                            <a href={link.href} className="underline text-green-600 dark:text-green-400">
-                              {link.label}
-                            </a>
-                          </li>
-                        ) : (
-                          <li key={idx}>{link.label}</li>
-                        )
-                      )}
+                      {step.links.map((link, idx) => (
+                        <li key={idx}>
+                          <DownloadLink label={link.label} />
+                        </li>
+                      ))}
                     </ul>
                   )}
 
-                  {step.code && <CopyCodeBlock code={step.code} />}
+                  {step.codeBlocks &&
+                    step.codeBlocks.map((block, idx) => (
+                      <CopyCodeBlock key={idx} code={block.code} />
+                    ))}
 
                   {step.details && (
-                    <p className="mt-2 text-green-700 dark:text-green-200">{step.details}</p>
+                    <p className="mt-2 text-green-700 dark:text-green-200">
+                      {step.details}
+                    </p>
                   )}
                 </div>
               ))}
             </div>
           </div>
         </section>
+
 
         {/* FAQ Section */}
         <section id={siteContent.faqSection.id} className="py-24 px-6">

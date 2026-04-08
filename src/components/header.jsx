@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import { FaApple, FaWindows, FaLinux, FaGithub } from "react-icons/fa";
 import { siteContent } from "@/content/site-content";
 import { Logo } from "@/components/ui/logo";
+import { useDownloadMenu } from "@/components/DownloadMenuContext";
 
 const platformIcons = {
   apple: FaApple,
@@ -18,9 +19,10 @@ const platformIcons = {
   windows: FaWindows,
 };
 
+
 export function Header() {
   const [open, setOpen] = React.useState(false);
-  const [downloadOpen, setDownloadOpen] = React.useState(false);
+  const { downloadOpen, setDownloadOpen } = useDownloadMenu();
   const scrolled = useScroll(10);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
@@ -30,11 +32,7 @@ export function Header() {
   }, []);
 
   React.useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
@@ -76,6 +74,8 @@ export function Header() {
               )}
             </Button>
           )}
+
+          {/* Download menu */}
           <div className="relative">
             <Button onClick={() => setDownloadOpen(!downloadOpen)}>
               <Download className="h-4 w-4 mr-2" />
@@ -105,7 +105,6 @@ export function Header() {
                           const variant =
                             groupIndex === 0 ? "outline" : "default";
 
-                          // Expandable CLI platform buttons
                           if (!isRepo && group.title.includes("CLI")) {
                             return (
                               <ExpandablePlatformButton
@@ -141,6 +140,8 @@ export function Header() {
             )}
           </div>
         </div>
+
+        {/* Mobile menu toggle */}
         <Button
           size="icon"
           variant="outline"
@@ -153,6 +154,7 @@ export function Header() {
           <MenuToggleIcon open={open} className="size-5" duration={300} />
         </Button>
       </nav>
+
       <MobileMenu open={open} className="flex flex-col justify-between gap-2">
         <div className="grid gap-y-2">
           {siteContent.navigation.links.map((link) => (
@@ -197,7 +199,11 @@ export function Header() {
               )}
             </Button>
           )}
-          <Button variant="outline" className="w-full">
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => setDownloadOpen(!downloadOpen)}
+          >
             <Download className="h-4 w-4 mr-2" />
             {siteContent.navigation.downloadMenu.label}
           </Button>

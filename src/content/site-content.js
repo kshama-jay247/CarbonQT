@@ -56,7 +56,7 @@ export const siteContent = {
   navigation: {
     links: [
       { label: "Features", href: "#features" },
-      { label: "Get Started", href: "/get-started" },
+      { label: "Get Started", href: "#get-started" },
       { label: "FAQ", href: "#faq" },
     ],
     primaryCta: {
@@ -65,14 +65,15 @@ export const siteContent = {
       external: true
     },
     downloadMenu: {
+      id: "download",
       label: "Download",
       groups: [
         {
           title: "GUI App (Qt)",
           items: [
             {
-              label: "Linux (.AppImage)",
-              href: "https://github.com/YOUR_USERNAME/carbonqt-gui/releases",
+              label: "Linux",
+              href: "https://github.com/kshama-jay247/CarbonQT",
               platform: "linux"
             }
           ]
@@ -205,40 +206,43 @@ export const siteContent = {
     ],
   },
   getStartedSection: {
-    id: "get-started",
-    title: "Get Started",
-    description: "Step-by-step instructions to install CarbonQt GUI and CLI, and run your first command.",
-    steps: [
-      {
-        number: "1",
-        title: "Install the GUI App",
-        description: "Download the latest Qt-based GUI release for your platform.",
-        details: "Once downloaded, run the installer and launch CarbonQt from your applications menu.",
-        links: [
-          { label: "Linux (.AppImage)", href: "https://github.com/YOUR_USERNAME/carbonqt-gui/releases" },
-          { label: "Windows and Mac releases coming soon", href: null }
-        ]
-      },
-      {
-        number: "2",
-        title: "Install the CLI Tool",
-        description: "Download the CLI binaries for your platform.",
-        details: "Extract the binary and add it to your PATH for easy access.",
-        links: [
-          { label: "Linux (AMD/ARM)", href: "https://github.com/kshama-jay247/CarbonQT_CLI" },
-          { label: "Windows (AMD/ARM)", href: "https://github.com/kshama-jay247/CarbonQT_CLI" },
-          { label: "Mac (AMD/ARM)", href: "https://github.com/kshama-jay247/CarbonQT_CLI" }
-        ]
-      },
-      {
-        number: "3",
-        title: "Run Your First Command",
-        description: "Open a terminal and type:",
-        details: "This will show all available options. Try `carbonqt-cli monitor` to start monitoring CPU and RAM usage.",
-        code: "carbonqt-cli --help"
-      }
-    ]
-  },
+  id: "get-started",
+  title: "Get Started",
+  description: "Follow these steps to set up CarbonQt GUI and CLI.",
+  steps: [
+    {
+      number: "1",
+      title: "To use the GUI app",
+      description: "Clone the GitHub repo and open it in QtCreator.",
+      codeBlocks: [
+        { code: "git clone https://github.com/kshama-jay247/CarbonQT" },
+        { code: "qtcreator CMakeLists.txt" }
+      ],
+      details: "Make sure you have QtCreator installed. Inside the cloned directory, run the above command. Once QtCreator opens, click the Run button."
+    },
+    {
+      number: "2",
+      title: "Install the CLI Tool",
+      description: "Download the CLI binaries for your platform.",
+      links: [
+        { label: "Linux (AMD/ARM)", action: "openDownloadMenu" },
+        { label: "Windows (AMD/ARM)", action: "openDownloadMenu" },
+        { label: "Mac (AMD/ARM)", action: "openDownloadMenu" }
+      ],
+      details: "Extract the binary and add it to your PATH for easy access."
+    },
+    {
+      number: "3",
+      title: "Run your first command",
+      description: "Open a terminal and type:",
+      codeBlocks: [
+        { code: "carbonqt dashboard" },
+        { code: "carbonqt help" }
+      ],
+      details: "The first command opens the dashboard. The second shows all available commands."
+    }
+  ]
+},
   testimonialsSection: {
     id: "testimonials",
     title: "Customer",
@@ -290,14 +294,14 @@ export const siteContent = {
       { label: "FAQ", href: "#faq" },
     ],
     downloadLinks: [
-      { label: "Resource One", href: "#resource-one" },
-      { label: "Resource Two", href: "#resource-two" },
-      { label: "Download Page", href: "https://example.com/download", external: true },
+      { label: "GitHub for GUI", href: "https://github.com/kshama-jay247/CarbonQT", external: true },
+      { label: "GitHub for CLI", href: "https://github.com/kshama-jay247/CarbonQT_CLI", external: true },
+      { label: "Download Page", href: "#download", external: true },
     ],
     legalLinks: [
       { label: "Privacy Policy", href: "/legal/privacy-policy" },
       { label: "Terms", href: "/legal/tos" },
-      { label: "Your Name", href: "https://example.com/about", external: true },
+      { label: "CarbonQt", href: "https://github.com/kshama-jay247/CarbonQT", external: true },
     ],
     socialLinks: [
       {
